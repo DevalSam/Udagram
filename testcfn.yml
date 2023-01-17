@@ -1,0 +1,9 @@
+Description: >
+    Sammy Young / Udacity
+    This templete deploys a VPC.
+Resources: 
+    AlxGradVPC:
+        Type: AWS::EC2::VPC
+        Properties: 
+            CidrBlock: 10.0.0.0/16
+            EnableDnsHostnames: true    
