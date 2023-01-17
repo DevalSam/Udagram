@@ -30,16 +30,13 @@ Parameters:
         Type: String
         Default: 10.0.3.0/24    
 
-    PublicUrl:
-        Description: A dicplay of the Public URL of LoadBalancer 
-        Type: String
-        Default: Http://
     
 Resources:
     VPC: 
         Type: AWS::EC2::VPC
         Properties:
             CidrBlock: !Ref VpcCIDR
+            EnableDnsSupport: true
             EnableDnsHostnames: true
             Tags: 
                 - Key: Name 
@@ -259,6 +256,3 @@ Outputs:
         Export: 
           Name: !Sub ${EnvironmentName}-PRI2-SN
 
-    PublicUrl: 
-        Description: A public url of our LoadBalancer 
-        Value: !Ref PublicUrl
