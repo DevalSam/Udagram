@@ -56,7 +56,7 @@ Resources:
           sudo apt-get install apache2 -y
           sudo systemctl start apache2.service          
       # ToDo: AMI ID of Ubuntu Linux machine. Too get one, try creating a VM from the web console. 
-      ImageId: micro t2
+      ImageId: t2 micro
       # ToDo: Change the key-pair name, as applicable to you. 
       KeyName: Key-pair name
       SecurityGroups:
